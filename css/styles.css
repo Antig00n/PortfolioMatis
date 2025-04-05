@@ -97,16 +97,15 @@ body {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-20px); /* Move up */
+      transform: translateY(-30px); /* Move up further */
     }
     100% {
       transform: translateY(0); /* Back to original position */
     }
   }
 
-  /* Applying animation to the text */
   .animated-text {
     display: inline-block;
     font-size: 2rem;
-    animation: upAndDown 1s ease-in-out infinite;
+    animation: upAndDown 3s ease-in-out infinite; /* Slower and smoother */
   }
