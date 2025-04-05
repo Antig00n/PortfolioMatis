@@ -101,7 +101,7 @@ body {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-30px);
+      transform: translateY(-40px);
     }
     100% {
       transform: translateY(0); 
@@ -110,6 +110,6 @@ body {
 
   .animated-text {
     display: inline-block;
-    font-size: 2rem;
-    animation: upAndDown 3s ease-in-out infinite; 
+    font-size: 1.5rem;
+    animation: upAndDown 5s ease-in-out infinite; 
   }
