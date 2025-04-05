@@ -99,8 +99,28 @@ body {
   }
  
 
+ /* RESPONSIVITY */
 
 
+
+
+  @media (max-width: 768px) {
+    .intro {
+      margin-bottom: 0.5rem; /* reduce space between stacked columns */
+    }
+  
+    .intro p {
+      margin-bottom: 0; /* remove default paragraph margin */
+    }
+  
+    .rounded-rectangle {
+      margin-bottom: 0.5rem; /* reduce image bottom margin */
+    }
+  
+    .row {
+      gap: 0.5rem; /* optional: Bootstrap 5 gap utility */
+    }
+  }
 
    /* ONLINECODE */
 
