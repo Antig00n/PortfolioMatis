@@ -95,7 +95,7 @@ body {
 
   @font-face {
     font-family: 'Titels';
-    src: url('styles/Space_Comics.ttf') format('truetype');
+    src: url('Space_Comics.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
