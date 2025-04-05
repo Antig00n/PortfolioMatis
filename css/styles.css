@@ -12,10 +12,7 @@ body {
    
 }
 
-a{
-    text-decoration: none;
 
-}
 .btn {
 
     color: white;
@@ -43,4 +40,45 @@ a{
     background: transparent;
     padding: 10px;
     border-radius: 10px;
+}
+
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 3%;
+}
+.navbar-center {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+.navbar-brand img {
+    display: block;
+    height: 80px; 
+    max-height: 80px; 
+    width: auto; 
+    
+}
+.navbar-center a {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
