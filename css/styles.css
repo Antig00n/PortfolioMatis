@@ -92,20 +92,24 @@ body {
  
 
 
+
+
+   /* ONLINECODE */
+
   @keyframes upAndDown {
     0% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-30px); /* Move up further */
+      transform: translateY(-30px);
     }
     100% {
-      transform: translateY(0); /* Back to original position */
+      transform: translateY(0); 
     }
   }
 
   .animated-text {
     display: inline-block;
     font-size: 2rem;
-    animation: upAndDown 3s ease-in-out infinite; /* Slower and smoother */
+    animation: upAndDown 3s ease-in-out infinite; 
   }
