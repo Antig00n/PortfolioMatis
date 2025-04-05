@@ -1,5 +1,9 @@
 body {
-    background: linear-gradient(135deg, #8ab2ba, #093445);
+    background: radial-gradient(
+        circle at top left,
+        #8ab2ba 5%,
+        #093445 30%);
+
     color: white;
     text-align: center;
     height: 100vh;
