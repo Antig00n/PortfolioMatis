@@ -1,10 +1,10 @@
 body {
-    background: linear-gradient(
-    45deg,
-    #8ab2ba 0%,
-    #093445 40%,
-    #093445 100%
-  );
+    background: radial-gradient(
+        circle at center,
+        #5f93b8 0%,
+        #093445 30%,
+        #093445 100%
+      );
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   background-color: #093445;
