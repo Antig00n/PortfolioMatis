@@ -1,8 +1,10 @@
 body {
-    background: radial-gradient(
-        circle at bottom left,
+    background: linear-gradient(
+        135deg,
         #8ab2ba 5%,
-        #093445 80%);
+        #093445 20%,
+        #093445 100%
+      );
 
     color: white;
     text-align: center;
