@@ -78,6 +78,7 @@ body {
     margin: 0;
     max-width: 100%;
     overflow: hidden;
+    padding-top: 30px;
 }
 .navbar-brand img {
     display: block;
