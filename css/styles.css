@@ -1,8 +1,8 @@
 body {
     background: radial-gradient(
-        circle at top left,
-        #8ab2ba 5%,
-        #093445 30%);
+        circle at bottom left,
+        #8ab2ba 1%,
+        #093445 60%);
 
     color: white;
     text-align: center;
