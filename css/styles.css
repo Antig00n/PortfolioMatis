@@ -106,7 +106,8 @@ body {
 
   @media (max-width: 768px) {
     .intro {
-      margin-bottom: -10%; /* reduce space between stacked columns */
+      margin-bottom: -50%; 
+      margin-top: -50%;
     }
 }
    
