@@ -1,5 +1,5 @@
 body {
-    background-color: #093445;
+    background: linear-gradient(135deg, #8ab2ba, #093445);
     color: white;
     text-align: center;
     height: 100vh;
