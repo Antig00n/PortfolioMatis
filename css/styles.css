@@ -1,11 +1,12 @@
 body {
     background: linear-gradient(
-        45deg,
-        #8ab2ba 0%,
-        #294e57 10%,
-        #093445 25%,
-        #093445 100%
-      );
+    45deg,
+    #8ab2ba 0%,
+    #093445 40%,
+    #093445 100%
+  );
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
   background-color: #093445;
 
     color: white;
