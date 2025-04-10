@@ -120,6 +120,7 @@ body {
     }  
   
 .push {margin-top: 15%;}
+.pull {margin-top: -15%;}
 
 
 
@@ -135,19 +136,6 @@ body {
 
 
 
-   /* ONLINECODE */
-
-   @keyframes upAndDown {
-    0% {
-      transform: translateY(-80);
-    }
-    50% {
-      transform: translateY(-80px);
-    }
-    100% {
-      transform: translateY(-80); 
-    }
-  }
 }
    
    /* ONLINECODE */
