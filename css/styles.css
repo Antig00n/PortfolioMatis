@@ -142,17 +142,11 @@ body {
       transform: translateY(-10);
     }
     50% {
-      transform: translateY(-40px);
+      transform: translateY(-80px);
     }
     100% {
       transform: translateY(-10); 
     }
-  }
-
-  .animated-text {
-    display: inline-block;
-    font-size: 2rem;
-    animation: upAndDown 5s ease-in-out infinite; 
   }
 }
    
