@@ -104,7 +104,7 @@ body {
 
 
 
-  @media (max-width: 760px) {
+  @media (max-width: 765px) {
     .intro {
     
       margin-top: -30%;
@@ -120,21 +120,10 @@ body {
     }  
   
 
-    .project-img {
-      width: 60%;
-      height: 20%;
-      object-fit: cover;
-      transition: transform 0.3s ease-in-out;
-  }
-  .project-img:hover {
-      transform: scale(1.05);
-  }
-  .project-card {
-      background: transparent;
-      padding: 2px;
-      border-radius: 2px;
-  }
-
+  .animated-text
+{
+  margin-top: -10%;
+}
 
 
 
