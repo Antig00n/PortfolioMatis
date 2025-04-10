@@ -139,13 +139,13 @@ body {
 
    @keyframes upAndDown {
     0% {
-      transform: translateY(-10);
+      transform: translateY(-80);
     }
     50% {
       transform: translateY(-80px);
     }
     100% {
-      transform: translateY(-10); 
+      transform: translateY(-80); 
     }
   }
 }
