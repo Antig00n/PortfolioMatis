@@ -130,7 +130,7 @@ body {
 
 
 
-.animatedt {
+.animatedt p{
   font-size: 1.5rem;
 }
 
@@ -150,7 +150,7 @@ body {
       transform: translateY(0); 
     }
   }
-  .animatedt {
+  .animatedt p {
     font-size: 2rem;
   }
   .animated-text {
