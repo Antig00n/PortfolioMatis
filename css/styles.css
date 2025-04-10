@@ -84,7 +84,7 @@ body {
     width: auto; 
     
 }
-.navbar-center a {
+.navbar-center a {                
     padding: 8px 16px;
     display: flex;
     align-items: center;
@@ -100,10 +100,6 @@ body {
  
 
  /* RESPONSIVITY */
-
-
-
-
   @media (max-width: 765px) {
     .intro {
     
@@ -134,6 +130,9 @@ body {
 
 
 
+.animatedt {
+  font-size: 1rem;
+}
 
 
 }
