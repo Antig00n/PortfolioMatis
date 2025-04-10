@@ -121,10 +121,6 @@ body {
   
 .push {margin-top: 15%;}
 
-  .animated-text
-{
-  margin-top: -20%;
-}
 
 
 
@@ -139,15 +135,27 @@ body {
 
 
 
+   /* ONLINECODE */
 
+   @keyframes upAndDown {
+    0% {
+      transform: translateY(-10);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(-10); 
+    }
+  }
 
-
-
-
+  .animated-text {
+    display: inline-block;
+    font-size: 2rem;
+    animation: upAndDown 5s ease-in-out infinite; 
+  }
 }
    
-  
-
    /* ONLINECODE */
 
   @keyframes upAndDown {
