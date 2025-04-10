@@ -121,8 +121,8 @@ body {
   
 
     .project-img {
-      width: 20%;
-      height: 10%;
+      width: 60%;
+      height: 20%;
       object-fit: cover;
       transition: transform 0.3s ease-in-out;
   }
