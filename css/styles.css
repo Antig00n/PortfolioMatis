@@ -106,9 +106,7 @@ body {
       margin-top: -30%;
       margin-bottom: -10%;
     }
-    .introp {
-        
-      }
+    
      
     .introf {
         height: 80%;
@@ -130,7 +128,7 @@ body {
 
 
 
-.animatedt p{
+.animatedt {
   font-size: 1.5rem; 
 }
 
