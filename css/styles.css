@@ -5,8 +5,8 @@ body {
         #093445 30%,
         #093445 100%
       );
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
+
+ 
   background-color: #093445;
 
     color: white;
