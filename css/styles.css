@@ -106,8 +106,8 @@ body {
 
   @media (max-width: 450px) {
     .intro {
-      margin-bottom: 0; 
-      margin-top: -20%;
+      margin-bottom: -35%; 
+      margin-top: -25%;
     }
     .introp {
         margin-top: -60%;
