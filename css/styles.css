@@ -79,8 +79,8 @@ body {
 }
 .navbar-brand img {
     display: block;
-    height: 80px; 
-    max-height: 80px; 
+ 
+    max-height: 100px; 
     width: 100%; 
     
 }
