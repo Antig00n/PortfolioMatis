@@ -90,6 +90,7 @@ body {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    min-width: 40px;
 }
 
 
