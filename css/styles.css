@@ -81,7 +81,7 @@ body {
     display: block;
     height: 80px; 
     max-height: 80px; 
-    width: auto; 
+    width: 100%; 
     
 }
 .navbar-center a {                
