@@ -3,68 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpage</title>
+    <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-transparent py-3 fixed-top">
-        <div class="container-fluid d-flex justify-content-center">
-            <div class="navbar-center">
-                <a href="projects.html" class="btn btn-outline-light btn-hover">Projects</a>
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logo.gif" alt="Logo">
-                </a>
-                <a href="contact.html" class="btn btn-outline-light btn-hover">Contact</a>
+
+    <header>
+        <nav class="navbar navbar-dark bg-transparent py-3 fixed-top">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="navbar-center">
+                    <a href="projects.html" class="btn btn-outline-light btn-hover">Projects</a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.gif" alt="Logo">
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-hover">Contact</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <div class="container d-flex flex-column align-items-center justify-content-center vh-100 mx-auto pull">
+    <main class="container d-flex flex-column align-items-center justify-content-center vh-100 mx-auto pull">
 
-        <div class="container mt-5 mx-auto" style=" height: 50%;">
-          <div class="row container mx-auto">
+        <section class="container mt-5 mx-auto" style="height: 50%;">
+            <div class="row container mx-auto">
+                
+                <figure class="col-md-4 intro">
+                    <img src="img/Prof_Foto.jpg" alt="Matis Ramos" class="img-fluid rounded-rectangle mb-4 mx-auto introf">
+                </figure>
             
-            <div class="col-md-4  intro">
-                <img src="img/Prof_Foto.jpg" alt="Logo" class="img-fluid rounded-rectangle mb-4 mx-auto introf">
-            </div>
-         
-            <div class="col-md-4 introp">
-                <p>Welkom op mijn portfolio!
-                    Mijn naam is Matis Ramos, een 21 jarige student in de IOT richting met een sterke interesse in web hosting en het creëren van slimme thuisopstellingen.
-                    Gedreven door mijn passie voor technologie, streef ik ernaar om efficiënte en toekomstgerichte oplossingen te bieden die de interactie met technologie vergemakkelijken en verbeteren. 
-                    Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden om mijn vaardigheden verder te ontwikkelen en toe te passen in de praktijk.
+                <article class="col-md-4 introp">
+                    <p>
+                        Welkom op mijn portfolio!<br>
+                        Mijn naam is Matis Ramos, een 21 jarige student in de IOT richting met een sterke interesse in web hosting en het creëren van slimme thuisopstellingen.
+                        Gedreven door mijn passie voor technologie, streef ik ernaar om efficiënte en toekomstgerichte oplossingen te bieden die de interactie met technologie vergemakkelijken en verbeteren. 
+                        Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden om mijn vaardigheden verder te ontwikkelen en toe te passen in de praktijk.
                     </p>
-            </div>
-            <div class="col-md-4">
-                    <div id="map" class="border rounded" style="width: 300px; height: 400px;"></div>
-                    
-            </div>
-            
-          </div>
-        </div>
-      </div>
+                </article>
 
-      <script> 
+                <aside class="col-md-4">
+                    <div id="map" class="border rounded" style="width: 300px; height: 400px;"></div>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <script> 
         var map = L.map('map').setView([51.21560, 4.43124], 15);
     
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-   
-    L.marker([51.21560, 4.43214]).addTo(map)
-        .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-        .openPopup();
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        L.marker([51.21560, 4.43214]).addTo(map)
+            .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+            .openPopup();
     </script>
+
 </body>
 </html>
