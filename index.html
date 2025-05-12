@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+
 </head>
 <body>
     <nav class="navbar navbar-dark bg-transparent py-3 fixed-top">
@@ -42,12 +47,24 @@
                     </p>
             </div>
             <div class="col-md-4">
-                <img src="" alt="" class="img-fluid rounded-rectangle mb-4" style=" height: 50%; ">
+                    <div id="map" class="border rounded" style="width: 300px; height: 400px;"></div>
+                    
             </div>
             
           </div>
         </div>
       </div>
 
+      <script> 
+        var map = L.map('map').setView([51.21560, 4.43124], 15);
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+   
+    L.marker([51.21560, 4.43214]).addTo(map)
+        .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+        .openPopup();
+    </script>
 </body>
 </html>

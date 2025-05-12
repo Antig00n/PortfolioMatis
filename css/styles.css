@@ -38,7 +38,7 @@ body {
 }
 
 .project-img {
-    width: 60%;
+    width: 50%;
     height: 20%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
@@ -84,8 +84,9 @@ body {
     width: 100%; 
     
 }
-.navbar-center a {                
-    padding: 8px 16px;
+.navbar-center a {     
+  margin-top: -5%;           
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
