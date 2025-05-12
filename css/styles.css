@@ -121,7 +121,12 @@ body {
 
 
 
-
+.project-img {
+  width: 70%;
+  height: 20%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
 
 
 
