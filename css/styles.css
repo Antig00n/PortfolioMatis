@@ -128,8 +128,8 @@ body {
   @media (max-width: 765px) {
     body{ background: radial-gradient(
         circle at center,
-        #5f93b8 20%,
-        #093445 50%,
+        #5f93b8 5%,
+        #093445 40%,
         #093445 100%
         
       );}
