@@ -126,6 +126,13 @@ body {
 
  /* RESPONSIVITY */
   @media (max-width: 765px) {
+    body{ background: radial-gradient(
+        circle at center,
+        #5f93b8 0%,
+        #093445 30%,
+        #093445 100%
+        
+      );}
     .intro {
     
       margin-top: -30%;
