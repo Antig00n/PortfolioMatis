@@ -81,12 +81,37 @@
   <div id="memeContainer">
     <img id="memeImage" src="" alt="Meme will appear here" style="display:none;" />
     <div id="quoteOverlay" style="display:none;"></div>
+     <script>
+   async function fetchMemeAndQuote() {
+  try {
+    // Fetch a random meme from Meme API
+    const memeResponse = await fetch('https://meme-api.herokuapp.com/gimme');
+    if (!memeResponse.ok) {
+      throw new Error(`Meme API responded with status: ${memeResponse.status}`);
+    }
+    const memeData = await memeResponse.json();
     
+    // Fetch a random quote from the Quotable API
+    const quoteResponse = await fetch('https://api.quotable.io/random');
+    if (!quoteResponse.ok) {
+      throw new Error(`Quotable API responded with status: ${quoteResponse.status}`);
+    }
+    const quoteData = await quoteResponse.json();
+    
+    // Display the meme image
+    const memeImage = document.getElementById('memeImage');
+    memeImage.src = memeData.url;
+    memeImage.style.display = 'block';
+    
+    // Overlay the quote text on the image
+    const quoteOverlay = document.getElementById('quoteOverlay');
+    quoteOverlay.textContent = quoteData.content;
+    quoteOverlay.style.display = 'block';
+  } catch (error) {
+    console.error("Fetch error:", error);
+    alert("Fetch error: " + error.message);
+  }
+   } </script>
   </div>
-  
-  
-
-    
-  </script>
 </body>
 </html>
