@@ -22,7 +22,9 @@ body {
    
 }
 
-
+.pdf {
+    width: 100%; height: 300px; all: set; 
+}
 .btn {
 
     color: white;
