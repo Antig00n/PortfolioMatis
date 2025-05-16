@@ -82,36 +82,48 @@
     <img id="memeImage" src="" alt="Meme will appear here" style="display:none;" />
     <div id="quoteOverlay" style="display:none;"></div>
      <script>
-   async function fetchMemeAndQuote() {
+   // netlify/functions/memeQuote.js
+
+// If you're using Node 18+, global.fetch is available.
+// Otherwise, you might need to install node-fetch: npm install node-fetch
+// and then: const fetch = require('node-fetch');
+
+exports.handler = async (event, context) => {
   try {
     // Fetch a random meme from Meme API
     const memeResponse = await fetch('https://meme-api.herokuapp.com/gimme');
     if (!memeResponse.ok) {
-      throw new Error(`Meme API responded with status: ${memeResponse.status}`);
+      throw new Error(`Meme API error: ${memeResponse.status}`);
     }
     const memeData = await memeResponse.json();
-    
-    // Fetch a random quote from the Quotable API
+
+    // Fetch a random quote from Quotable API
     const quoteResponse = await fetch('https://api.quotable.io/random');
     if (!quoteResponse.ok) {
-      throw new Error(`Quotable API responded with status: ${quoteResponse.status}`);
+      throw new Error(`Quote API error: ${quoteResponse.status}`);
     }
     const quoteData = await quoteResponse.json();
-    
-    // Display the meme image
-    const memeImage = document.getElementById('memeImage');
-    memeImage.src = memeData.url;
-    memeImage.style.display = 'block';
-    
-    // Overlay the quote text on the image
-    const quoteOverlay = document.getElementById('quoteOverlay');
-    quoteOverlay.textContent = quoteData.content;
-    quoteOverlay.style.display = 'block';
+
+    return {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*", // allow requests from any origin
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        meme: memeData,
+        quote: quoteData
+      })
+    };
   } catch (error) {
-    console.error("Fetch error:", error);
-    alert("Fetch error: " + error.message);
+    return {
+      statusCode: 500,
+      headers: { "Access-Control-Allow-Origin": "*" },
+      body: JSON.stringify({ error: error.message })
+    };
   }
-   } </script>
+};
+ </script>
   </div>
 </body>
 </html>
