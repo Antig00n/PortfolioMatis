@@ -107,8 +107,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150%;
-    height: 30vh;
+    width: 125vh;
+    height: 60vh;
   }
 
   iframe {
