@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="three.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="GLTFLoader.js" type="text/javascript"></script>
+</head>
+
+<body id="body" class="dark-mode">
+    <header>
+      <div id="shopblok2"> 
+       
+         
+        <a href="index.html">  <img id="Logo" src="img/logo.png"> </a>
+        <a href="aanmelden.php"> <img id="login"  src="img/Login.png"></a>
+        <div>
+            <ul >
+                <a href="index1.html" ><li>Back</li></a>
+              </ul>
+            </div>
+        
+       
+       </div> </header> 
+<div id="shopblok3">
+    <h1>Koop nu!</h1>
+    <form>
+        <select id="soort" name="soort" size="4" multiple>
+            <option value="Model 1">1</option>
+            <option value="Model 2">2</option>
+          </select>
+
+    </form>
+    <canvas id="myCanvas"></canvas>
+    
+
+    <script src="three.js"></script>
+    <script src="GLTFLoader.js"></script>
+
+    <script>
+
+    var renderer,
+    	scene,
+    	camera,
+    	myCanvas = document.getElementById('myCanvas');
+
+    //RENDERER
+    renderer = new THREE.WebGLRenderer({
+      canvas: myCanvas, 
+      antialias: true
+    });
+    renderer.setClearColor(0xb8eafe);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    //CAMERA
+    camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+    //SCENE
+    scene = new THREE.Scene();
+
+    //LIGHTS
+    var light = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(light);
+
+    var light2 = new THREE.PointLight(0xffffff, 0.5);
+    scene.add(light2);
+  
+    var loader = new THREE.GLTFLoader();
+
+        
+
+    loader.load('black1.glb', handle_load);
+
+    var mesh;
+
+    function handle_load(gltf) {
+
+        console.log(gltf);
+        mesh = gltf.scene;
+        console.log(mesh.children[0]);
+        mesh.children[0].material = new THREE.MeshLambertMaterial();
+		scene.add( mesh );
+        mesh.position.z = -10;
+    }
+
+
+    //RENDER LOOP
+    render();
+
+    var delta = 0;
+    var prevTime = Date.now();
+
+    function render() {
+
+        delta += 0.1;
+
+        if (mesh) {
+        
+            mesh.rotation.y += 0.005;
+
+            //animation mesh
+            // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
+        }
+
+    	renderer.render(scene, camera);
+
+    	requestAnimationFrame(render);
+    }
+
+    </script>
+    </div>
+    <footer> <a  href="catalogus.html"   id="buttonfoot"  style=" margin-top: 6%; margin-left: auto; margin-left: 40%;"></a>  <p style="font-size: 20px; color: white; ">&#169;TerraScope</p> </footer>
+</body>
+</html>

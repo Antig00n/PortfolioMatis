@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="three.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/styles.scss">
+    <script src="OrbitControls.js"></script>
+    <script src="findAndReplaceDOMText.js"></script>
+    <script src="GLTFLoader.js" type="text/javascript"></script>
+</head>
+
+<body id="body" class="dark-mode">
+    <header>
+       
+    <div id="bgg" style=" height: 10000px; background-color: #b8eafe; display: none;  ">
+      <img id="cloudslog" class="center" src="img/Untitled-1.png" >
+      <img id="cloudsdec"  src="img/cloud2.png" >
+      
+      <img id="cloudsdec"  src="img/cloud4.png" style="margin-right: 20%;" >
+      <div  id="emaildiv" style="height: 10%; width: 90%;  " >
+          <form id="forminlog"  name="form_Aanmelden" method="post" action="" style="width: 100%;">
+          
+          
+          <div id="emaildiv" style="font-family: mont-heavy; text-align: center;">
+          <label for="email" class="">E-Mail</label> <br>
+          <input name="email" class="invullen" id="email" type="email">
+
+          <label for="wachtwoord" class="">Wachtwoord</label> <br>
+          <input name="wachtwoord" class="invullen" id="wachtwoord" type="password">
+          </div>
+          <div id="enddiv">
+          <input type="submit" id="button2" class="loginbutton" value="aanmelden" name="knop_aanmelden">
+      </div>
+      </form>  
+          <?php echo $foutmelding; ?></div></div>
+  <header>
+      <div id="Headerr">   
+          <a href="index1.html">  <img id="Logo" src="img/logo.png"> </a>
+          <a href="#" id="myBtn"  onclick="login()"> <img id="login"  src="img/Login.png"></a>
+         <div id="xbut"  style="display: none;"> <a href="#" id="myBtn"    onclick="login()"> <img id="login"  src="img/letter-x.png" style="width: 2.8%;"></a></div>
+          <div id="nav">
+              <ul >
+                  <a href="index.html" ><img src="img/home.png" id="icon"></a>
+                  <a href="#Anchor" ><img src="img/info.png" id="icon"></a>
+                  <a href="shop.html"  ><img src="img/shopping-bag.png" id="icon"></a>
+                  <a href="#"  ><img src="img/email.png" id="icon"></a>
+                  <a href="teasers.html"  ><img src="img/history.png" id="icon"></a>
+                  <a href="admin.html"  ><img src="img/management.png" id="icon"></a>
+                </ul>
+              </div>
+      </div>
+       </header> 
+<div id="shopblok3"   style="z-index:100; position: relative; ">
+    <h1> Personaliseer uw Terrascope Bril</h1>
+    <form method="GET">
+        <label for="Model">Kies uw model:</label>
+      <div id="Model1" >  <button class="btn btn-one" type='button' id="Kl" onclick="Model1()"><span>Model 1</span></button></div>
+      <div id="Model2">     <button class="btn btn-one" type='button' id="Kl" onclick="Model2()">Model2</button></div>
+          <br>
+         
+          
+          <div id="Kle1" style="display: none;">
+            <label for="kleur">Kies uw kleur:</label>
+            <button type='button' id="Kl1" onclick="Kleur1()">Groen</button>
+            <button type='button' id="Kl2" onclick="Kleur2()">Zwart</button>
+            <button type='button' id="Kl3" onclick="Kleur3()">Wit</button>
+            <button type='button' id="Kl4" onclick="Kleur4()">Blauw</button>
+          </div>
+          <div id="Kle2" style="display: none;">
+            <label for="kleur">Kies uw kleur:</label>
+            <button type='button' id="Kl5" onclick="Kleur5()">Groen</button>
+            <button type='button' id="Kl6" onclick="Kleur6()">Zwart</button>
+            <button type='button' id="Kl7" onclick="Kleur7()">Wit</button>
+            <button type='button' id="Kl8" onclick="Kleur8()">Blauw</button>
+          </div>
+          <br>
+          <div id="sterk" style="display: none;">
+          <label for="sterktes">Kies uw sterkte:</label>
+          <input list="sterkte" id="sterktes" name="sterktes" />
+          
+          <datalist id="sterkte">
+            <option value="-2.25">
+              <option value="-2">
+              <option value="-1.75">
+              <option value="-1.5">
+              <option value="-1.25">
+              <option value="-1">
+              <option value="0">
+              <option value="+1">
+              <option value="+1.25">
+              <option value="+1.50">
+              <option value="+1.75">
+              <option value="+2">
+              <option value="+2.25">
+          </datalist>
+          <br>
+        </div>
+        <div class="container">
+          <div class="center">
+            <input type="submit" id="shopbutton" class="btn" value="Voeg Toe">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+            
+          </div>
+        </div>
+
+
+          
+    </form>
+    <button id="Control" style="display: none;">Control</button>
+  </div>
+    <canvas id="myCanvas"  style="width: 400px; height: 200px; z-index: -1; " tabindex="0"></canvas>
+    <script src="three.js"></script>
+    <script src="GLTFLoader.js"></script>
+
+    <script id="three">
+
+y = document.getElementById("login");
+x = document.getElementById("bgg");    
+        
+            function login() {
+var y = document.getElementById("login");
+var x = document.getElementById("bgg");
+var z = document.getElementById("xbut");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";};
+
+    if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";};
+
+    
+    if (z.style.display === "block") {
+    z.style.display = "none";
+  } else {
+    z.style.display = "block";};
+}
+   
+
+
+
+
+document.getElementById("Control").addEventListener("click", myFunction);
+function myFunction (){loader.load('black1.glb', handle_load);}
+
+document.getElementById("Kl1").addEventListener("change", Kleur1);
+function Kleur1 (){loader.load('3ds/groen.glb', handle_load);}
+document.getElementById("Kl2").addEventListener("change", Kleur2);
+function Kleur2 (){loader.load('3ds/zwart.glb', handle_load);}
+document.getElementById("Kl3").addEventListener("change", Kleur3);
+function Kleur3 (){loader.load('3ds/wit.glb', handle_load);}
+document.getElementById("Kl4").addEventListener("click", Kleur4);
+function Kleur4 (){loader.load('3ds/blauw.glb', handle_load);}
+
+
+document.getElementById("Kl5").addEventListener("change", Kleur5);
+function Kleur5 (){loader.load('3ds/groen2.glb', handle_load);}
+document.getElementById("Kl6").addEventListener("change", Kleur6);
+function Kleur6 (){loader.load('3ds/zwart2.glb', handle_load);}
+document.getElementById("Kl7").addEventListener("change", Kleur7);
+function Kleur7 (){loader.load('3ds/wit2.glb', handle_load);}
+document.getElementById("Kl8").addEventListener("click", Kleur8);
+function Kleur8 (){loader.load('3ds/blauw2.glb', handle_load);}
+
+let kle1 = document.getElementById("Kle1")
+let mdl2 = document.getElementById("Model2")
+let mdl1 = document.getElementById("Model1")
+let sterk = document.getElementById("sterk")
+function Model1() {
+
+  if (kle1.style.display === "none") {
+    kle1.style.display = "block";
+  } else {
+    kle1.style.display = "none";
+  }
+
+  if (mdl2.style.display === "none") {
+    mdl2.style.display = "block";
+  } else {
+    mdl2.style.display = "none";
+  }
+  if (sterk.style.display === "none") {
+    sterk.style.display = "block";
+  } else {
+    sterk.style.display = "none";
+  }
+  
+}
+function Model2() {
+  var x = document.getElementById("Kle2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  if (mdl1.style.display === "none") {
+    mdl1.style.display = "block";
+  } else {
+    mdl1.style.display = "none";
+  }
+  if (sterk.style.display === "none") {
+    sterk.style.display = "block";
+  } else {
+    sterk.style.display = "none";
+  }
+}
+
+
+
+
+
+
+    var renderer,
+    	scene,
+    	camera,
+    	myCanvas = document.getElementById('myCanvas');
+
+    //RENDERER
+    renderer = new THREE.WebGLRenderer({
+      canvas: myCanvas, 
+      antialias: true
+    });
+    renderer.setClearColor(0xb8eafe);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+   
+  
+
+    //CAMERA
+    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+    //SCENE
+    scene = new THREE.Scene();
+
+    //LIGHTS
+    var light = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(light);
+
+    var light2 = new THREE.PointLight(0xffffff, 0.5);
+    scene.add(light2);
+  
+    var loader = new THREE.GLTFLoader();
+
+        
+
+    loader.load('3ds/groen.glb', handle_load);
+   
+    var mesh;
+
+    function handle_load(gltf) {
+
+        console.log(gltf);
+        var selectedObject = scene.getObjectByName("brilscene");
+    scene.remove( selectedObject );
+        mesh = gltf.scene;
+        console.log(mesh.children[0]);
+        mesh.children[0].material = new THREE.MeshLambertMaterial();
+        mesh.name="brilscene"
+		scene.add( mesh );
+        mesh.position.z = -10;
+    }
+
+
+    //RENDER LOOP
+    render();
+
+    var delta = 0;
+    var prevTime = Date.now();
+
+    function render() {
+
+        delta += 0.1;
+
+        if (mesh) {
+        
+            mesh.rotation.y += 0.005;
+
+            //animation mesh
+            // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
+        }
+
+    	renderer.render(scene, camera);
+
+    	requestAnimationFrame(render);
+    }
+
+    </script>
+    </div>
+    <footer> <a  href="catalogus.html"   id="buttonfoot"  style=" margin-top: 6%; margin-left: auto; margin-left: 40%;"></a>  <p style="font-size: 20px; color: white; ">&#169;TerraScope</p> </footer>
+
+
+
+
+
+  </body>
+</html> 

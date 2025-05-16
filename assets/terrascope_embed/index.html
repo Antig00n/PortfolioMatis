@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraScope</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="Script.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+    <script  type="text/javascript">
+     var img = document.getElementById("blok7")   
+        $(document).ready(function(){
+            $("#blok7").fadeIn(7000);
+        });
+        $(document).ready(function(){
+            $("#blok8").fadeIn(10000);
+        });
+        $(window).load(function(){
+    $('img.zoom').addClass('element-animation');
+});
+ 
+y = document.getElementById("login");
+x = document.getElementById("bgg");    
+        
+            function login() {
+var y = document.getElementById("login");
+var x = document.getElementById("bgg");
+var z = document.getElementById("xbut");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";};
+
+    if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";};
+
+    
+    if (z.style.display === "block") {
+    z.style.display = "none";
+  } else {
+    z.style.display = "block";};
+}
+   
+</script>
+<?php 
+    require_once("include/dbconn.inc.php");
+    ob_start();
+    session_start();
+    $foutmelding = "";
+    
+    if (isset($_POST['knop_aanmelden'])){
+    $email = $_POST['email'];
+    $ww = $_POST['wachtwoord'];
+    
+    $qrySelectKlant = "SELECT klantID, achternaam, voornaam
+    FROM tblklant
+    WHERE email=? AND wachtwoord=?";
+    if ($stmtSelectKlant = mysqli_prepare($dbconn, $qrySelectKlant))
+    {mysqli_stmt_bind_param($stmtSelectKlant, 'ss', $email, $ww);
+    mysqli_stmt_execute($stmtSelectKlant);
+    mysqli_stmt_bind_result($stmtSelectKlant, $klantID, $achternaam, $voornaam);
+    mysqli_stmt_store_result($stmtSelectKlant);
+    mysqli_stmt_fetch($stmtSelectKlant);
+    $aantal = mysqli_stmt_num_rows($stmtSelectKlant);
+    
+    if($aantal > 0) {
+    $_SESSION['klantID'] = $klantID;
+    $_SESSION['achternaam'] = $achternaam;
+    $_SESSION['voornaam'] = $voornaam;
+    header("location:index.html");
+    } else { $foutmelding = "Email en of wachtwoordd zit niet in ons systeem.";}
+    }
+    }
+    ?>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    
+    </style>
+<body id="body" class="dark-mode">
+
+  <div id="bgg" style=" height: 10000px; background-color: #b8eafe; display: none;  ">
+    <img id="cloudslog" class="center" src="img/Untitled-1.png" >
+    <img id="cloudsdec"  src="img/cloud2.png" >
+    <div id="xbut"  style="display: none;"> <a href="#" id="myBtn"    onclick="login()"> <img id="login"  src="img/letter-x.png" style="width: 2.8%;"></a></div>
+    
+    <img id="cloudsdec"  src="img/cloud4.png" style="margin-right: 20%;" >
+    <div  id="emaildiv" style="height: 10%; width: 90%;  " >
+        <form id="forminlog"  name="form_Aanmelden" method="post" action="" style="width: 100%;">
+        
+        
+        <div id="emaildiv" style="font-family: mont-heavy; text-align: center;">
+        <label for="email" class="">E-Mail</label> <br>
+        <input name="email" class="invullen" id="email" type="email">
+
+        <label for="wachtwoord" class="">Wachtwoord</label> <br>
+        <input name="wachtwoord" class="invullen" id="wachtwoord" type="password">
+        </div>
+        <div id="enddiv">
+        <input type="submit" id="button2" class="loginbutton" value="aanmelden" name="knop_aanmelden">
+    </div>
+    </form>  
+        <?php echo $foutmelding; ?></div></div>
+      <div id="blok7"> 
+       
+         
+        <a href="index1.html">  <img style=" margin: 1%; opacity: 75%;" id="Logobegin" class="zoom" src="img/logo.png"> </a>
+        <div id="blok8"><p >Welkom bij Terrascope! Klik op het logo om door te gaan als gast of <a href="#" id="myBtn"  onclick="login()" >hier</a> om in te loggen.</p></div>
+        <div id="darkmodebtn">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+        </div>
+        
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+  <span class="close">&times;</span>
+  <p><div id="blok5"> 
+    <a href="index1.html">  <img id="logoLogo" src="img/logo.png"> </a>
+</div> 
+
+
+<div id="blok5">
+
+<form name="form_Aanmelden" method="post" action="">
+<div>
+<label for="email" class="">E-Mail</label> <br>
+<input name="email" class="invullen" id="email" type="email">
+</div>
+<div>
+<label for="wachtwoord" class="">Wachtwoord</label> <br>
+<input name="wachtwoord" class="invullen" id="wachtwoord" type="password">
+</div>
+<input type="submit" id="button1" class="loginbutton" value="aanmelden" name="knop_aanmelden">
+</form>  
+<?php echo $foutmelding; ?>
+</div> 
+</div>
+
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+</script>
+     
+
+</body>
+</html>

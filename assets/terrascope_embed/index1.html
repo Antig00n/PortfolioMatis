@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    Natuur geeft mensen een gelukkig en verlicht gevoel.
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraScope</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="Script.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+    <script  type="text/javascript">
+        $(document).ready(function(){
+            $("#blok1").fadeIn(6000);
+        });
+        $(document).ready(function(){
+            $("#blok3").fadeIn(7000);
+        });
+        $(document).ready(function(){
+            $("#blok2").fadeIn(3000);
+        });
+        
+        function myFunction() {
+            $("#fade").fadeIn(10000);}
+  
+y = document.getElementById("login");
+x = document.getElementById("bgg");    
+        
+            function login() {
+var y = document.getElementById("login");
+var x = document.getElementById("bgg");
+var z = document.getElementById("xbut");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";};
+
+    if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";};
+
+    
+    if (z.style.display === "block") {
+    z.style.display = "none";
+  } else {
+    z.style.display = "block";};
+}
+   
+</script>
+
+
+    
+    </style>
+<body id="body"  class="dark-mode" style="height: 200px;" >style="overflow-y: hidden;"
+   
+    <div id="bgg" style=" height: 1000px; background-image: url(img/bg26\ -\ Copy.png); display: none;  ">
+        <img id="cloudslog" class="center" src="img/Untitled-1.png" >
+       
+        <div  id="emaildiv" style="height: 10%; width: 90%;  " >
+            <form id="forminlog"  name="form_Aanmelden" method="post" action="" style="width: 100%;">
+            
+            
+            <div id="emaildiv" style="font-family: mont-heavy; text-align: center;">
+            <label for="email" class="">E-Mail</label> <br>
+            <input name="email" class="invullen" id="email" type="email">
+
+            <label for="wachtwoord" class="">Wachtwoord</label> <br>
+            <input name="wachtwoord" class="invullen" id="wachtwoord" type="password">
+            </div>
+            <div id="enddiv">
+            <input type="submit" id="button2" class="loginbutton" value="aanmelden" name="knop_aanmelden">
+        </div>
+        </form>  
+            <?php echo $foutmelding; ?></div></div>
+    <header>
+        <div id="Headerr">   
+            <a href="index1.html">  <img id="Logo" src="img/logo.png"> </a>
+            <a href="#" id="myBtn"  onclick="login()"> <img id="login"  src="img/Login.png"></a>
+           <div id="xbut"  style="display: none;"> <a href="#" id="myBtn"    onclick="login()"> <img id="login"  src="img/letter-x.png" style="width: 2.8%;"></a></div>
+            <div id="nav">
+                <ul >
+                    <a href="index.html" ><img src="img/home.png" id="icon"></a>
+                    <a href="#Anchor" ><img src="img/info.png" id="icon"></a>
+                    <a href="catalogus.html"  ><img src="img/shopping-bag.png" id="icon"></a>
+                    <a href="#"  ><img src="img/email.png" id="icon"></a>
+                    <a href="teasers.html"  ><img src="img/history.png" id="icon"></a>
+                    <a href="admin.html"  ><img src="img/management.png" id="icon"></a>
+                  </ul>
+                </div>
+        </div>
+      <div id="blok2"> 
+       
+      
+       
+        
+       
+       </div> </header> 
+       <div id="darkmodebtn">
+        <input type="checkbox" class="checkbox" id="chk" >
+        <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+      
+<div id="blok1"> 
+        <p class="TitelsStart">
+  TerraScope 
+        </p> 
+        <p class="SloganStart" id="body">
+  Know what your plants need
+        </p> 
+    </div>
+   
+    <div id="blok3"> 
+        <p>
+            Met de TerraScope kan iedereen makkelijk zelf verse groenten, fruit, planten of bloemen kweken en laten groeien.
+
+           <br>
+            
+            Bent u klaar om een deel uit te maken van de zelfkweek- en landbouwrevolutie?
+            
+           
+        </p>
+        <p id="bijsluiter"> De TerraScope is verkrijgbaar op sterkte en in verschillende kleuren.</p>
+        <br>
+    <div>
+        
+        <a href="#Anchor" id="button1" onclick="myFunction()" id="tour"   >Klik hier om de tour te beginnen!</a>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="Anchor">
+<div id=blok4> 
+    <p class="Slogan">
+        Hoe werkt onze Terrascope ?
+              </p> 
+<p class="Teksten"  class="right"> <img class="left" src="img/bril_Trans.png">De TerraScope scant met zijn ingebouwde camera de plant- of bloemsoort en raadpleegt zijn enorme database om de plant- of bloemsoort te identificeren.
+<br>
+    Vervolgens voert de TerraScope enkele analyses uit.
+<br>
+    De bril berekent het vochtpercentage in de lucht, gaat na wat het kooldioxidegehalte is en analyseert of de plant voldoende zoninval heeft.
+    
+    Als het probleem daar niet ligt, zal de TerraScope, de plant verder onderzoeken om te checken welke voedingstoffen jou plant of bloem mist om goed te groeien.
+<br>
+    De TerraScope verzamelt al zijn vaststellingen uit de analyses en vertaalt die in concrete richtlijnen. Zo weet je meteen wat je moet aanpassen om jou plant of bloem optimaal te laten groeien.
+    </p>
+   <a href="#blok6" onclick="myFunction()"> <img id="fade" class="arrow" src="img/arrow.png"></a>
+</div></div>
+<div id=blok6> 
+    <p class="Slogan">
+        Waarom TerraScope Gebruiken ?
+              </p> 
+<p class="Teksten" class="left"> <img class="right" src="img/logo_Trans.png">Je kan snel en makkelijk ontdekken wat je planten- of bloemen nodig hebben.
+    <br> Dit geeft iedereen de mogelijkheid om zelf succesvol groenten en fruit te kweken.
+    <br>
+    TerraScope wil mensen motiveren om zelf meer planten te kweken en te eten. 
+    <br>Ons product maakt een eigen moestuin hebben haalbaar en makkelijk. Wij hopen mensen ertoe aan te zetten gezonder, frisser en gelukkiger te leven.
+    <br>
+    <br>
+    Ook de landbouw in ontwikkelingslanden zullen ondersteund worden door de TerraScope, elke aankoop draagt dus zijn steentje bij.
+    <br>Uiteraard kunnen ook onze eigen landbouwers veel efficiënter werken met het gebruik van de TerraScope. We willen dan ook de lokale groei zo veel mogelijk promoten.
+    </p>
+   
+</div>
+
+ <footer>  <a href="#"><img src="img/up-arrow.png" id="iconbot"></a> <a  href="catalogus.html"   id="buttonfoot"  style="  margin-left: auto; margin-left: 40%;">Start Vandaag!</a>  <p style="font-size: 20px; color: white; ">&#169;TerraScope</p> </footer>
+    
+
+
+
+
+
+</div>
+
+
+
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+</script>
+     
+</body>
+</html>
