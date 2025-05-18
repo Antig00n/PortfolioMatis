@@ -30,30 +30,6 @@ body {
 
 
 
-#team {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.pokemon {
-    width: 150px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 10px;
-}
-
-.pokemon img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    background-color: #f0f0f000;
-}
 
 
 
@@ -152,6 +128,32 @@ body {
     border: none;
   }
  
+
+
+#team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pokemon {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+.pokemon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: #f0f0f000;
+}
 
  /* RESPONSIVITY */
   @media (max-width: 765px) {
