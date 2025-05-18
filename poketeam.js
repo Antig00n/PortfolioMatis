@@ -19,7 +19,7 @@ async function generateTeam() {
     const promises = [];
     
     for (let i = 0; i < teamSize; i++) {
-        const pokemonId = Math.floor(Math.random() * 898) + 1; // Supports up to Gen 8
+        const pokemonId = Math.floor(Math.random() * 898) + 1; 
         promises.push(getPokemon(pokemonId));
     }
     
