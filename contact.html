@@ -12,6 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+ <script>
+        function showPopup() {
+            alert("This is a pop-up message!");
+        }
+    </script>
+
 </head>
 <body>
 
@@ -41,9 +47,7 @@
                         <li class="mb-3"><a href="www.instagram.com/antig00n/" class="text-white fs-3 text-decoration-none btn btn-hover"><i class="bi bi-instagram"></i> Instagram</a></li>
                         <li class="mb-3"><a href="https://github.com/Antig00n" class="text-white fs-3 text-decoration-none btn btn-hover"><i class="bi bi-github"></i> GitHub</a></li>
                     
-                  <li class="mb-3"> <a href="yourLink"  target="popup"  onclick="window.open('yourLink','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;" class="text-white fs-3 text-decoration-none btn btn-hover">
-    Open Popup
-</a><i class="bi bi-instagram"></i> Instagram</a></li>
+                  <li class="mb-3"> <a href="#" onclick="showPopup(); return false;">Click me for a popup</a><i class="bi bi-instagram"></i> Instagram</a></li>
                     </ul>
                 </article>
 
