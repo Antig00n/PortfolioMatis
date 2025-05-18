@@ -190,14 +190,6 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-
-
-
-
-
-
-
-
 .animatedt {
   font-size: 0.5rem; 
 }
@@ -205,6 +197,9 @@ body {
 
 }
    
+
+
+
    /* ONLINECODE */
 
   @keyframes upAndDown {
