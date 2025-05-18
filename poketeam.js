@@ -1,6 +1,7 @@
 async function getPokemon(pokemonId) {
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
     const response = await fetch(url);
+
     if (response.ok) {
         const data = await response.json();
         return {
@@ -8,8 +9,8 @@ async function getPokemon(pokemonId) {
             image: data.sprites.front_default
         };
     }
-    return null;
-}
+    return null; }
+
 
 async function generateTeam() {
     const pokemonDivs = document.querySelectorAll(".pokemon");
@@ -20,10 +21,11 @@ async function generateTeam() {
         promises.push(getPokemon(pokemonId));
     }
 
+
+
     const team = await Promise.all(promises);
     team.forEach((pokemon, index) => {
         if (pokemon) {
             pokemonDivs[index].innerHTML = `<p>${pokemon.name}</p><img src="${pokemon.image}" alt="${pokemon.name}">`;
         }
-    });
-}
+    }); }
