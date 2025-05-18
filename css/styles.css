@@ -34,11 +34,12 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .pokemon {
     width: 150px;
-    height: 200px; /* Fixed space */
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,9 +50,10 @@ body {
 }
 
 .pokemon img {
-    width: 100px; /* Set a standard width */
-    height: 100px; /* Set a standard height */
-    object-fit: contain; /* Ensures images scale properly */
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: #f0f0f0; /* Placeholder background */
 }
 
 
