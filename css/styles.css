@@ -53,8 +53,7 @@ body {
     width: 100px;
     height: 100px;
     object-fit: contain;
-    background-color: #f0f0f0;
-    opacity: 0%;
+    background-color: #f0f0f000;
 }
 
 
