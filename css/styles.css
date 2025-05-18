@@ -37,11 +37,17 @@ body {
 }
 
 .pokemon {
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid #333;
-    background-color: white;
-    border-radius: 10px;
+    width: 150px;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon img {
+    max-width: 100%;
+    height: auto;
 }
 
 
