@@ -33,7 +33,7 @@ margin-right: 30%;
 color: gray;
 opacity: 50%;
 font-size: 0.75rem;
-
+position: absolute;
 
 
 }
@@ -63,6 +63,7 @@ font-size: 0.75rem;
     height: 20%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    position: absolute;
 }
 .project-img:hover {
     transform: scale(1.05);
