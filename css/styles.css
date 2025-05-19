@@ -63,7 +63,6 @@ position: absolute;
     height: 20%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-    position: absolute;
 }
 .project-img:hover {
     transform: scale(1.05);
