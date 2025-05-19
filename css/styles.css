@@ -36,7 +36,11 @@ opacity: 50%;
 font-size: 0.75rem;
 }
 
+.fig{
+color: black;
+opacity: 100%;
 
+}
 
 
 .pdf {
@@ -205,7 +209,7 @@ font-size: 0.75rem;
 figcaption{
 margin-top: 2px;
 margin-bottom: -6%;
-color: black;
+color: gray;
 opacity: 50%;
 font-size: 0.5rem;
 
