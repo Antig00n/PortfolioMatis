@@ -33,7 +33,7 @@ margin-top: 5%;
 color: gray;
 opacity: 50%;
 font-size: 0.75rem;
-position: fixed;
+position: static;
 
 
 }
