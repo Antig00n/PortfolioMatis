@@ -21,7 +21,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         const response = await fetch("https://meowfacts.herokuapp.com/");
         const data = await response.json();
-        document.getElementById("catFact").innerText = data.data[0];
+        const fact = data.data[0];
+
+
+        if (fact.length <= 30) {
+            document.getElementById("catFact").innerText = fact;
+        } else {
+            document.getElementById("catFact").innerText = "No short cat facts available!";
+        }
     } catch (error) {
         console.error("Error fetching cat fact:", error);
         document.getElementById("catFact").innerText = "Failed to load cat fact.";
