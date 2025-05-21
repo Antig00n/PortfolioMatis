@@ -17,24 +17,7 @@
             alert("mushie8677");
         }
     </script>
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-    try {
-        const response = await fetch("https://meowfacts.herokuapp.com/");
-        const data = await response.json();
-        const fact = data.data[0];
 
-
-        if (fact.length <= 150) {
-            document.getElementById("catFact").innerText = fact;
-        } 
-    } catch (error) {
-        console.error("Error fetching cat fact:", error);
-        document.getElementById("catFact").innerText = "Failed to load cat fact.";
-    }
-});
-
-    </script>
 </head>
 <body>
 
@@ -93,8 +76,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     <div class="container-fluid">
         <p class="mb-0">&copy; 2025 Matis Ramos</p>
     </div>
-       <div> <p style="font-size: 0,5rem;" id="catFact">Loading...</p>
-</div>
+       
 </footer>
 </body>
 </html>
