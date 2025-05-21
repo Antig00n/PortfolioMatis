@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const fact = data.data[0];
 
 
-        if (fact.length <= 50) {
+        if (fact.length <= 100) {
             document.getElementById("catFact").innerText = fact;
         } 
     } catch (error) {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     <div class="container-fluid">
         <p class="mb-0">&copy; 2025 Matis Ramos</p>
     </div>
-    <div> <p id="catFact">Loading...</p>
+    <div> <p style="font-size: 0,5rem;" id="catFact">Loading...</p>
 </div>
 </footer>
 
