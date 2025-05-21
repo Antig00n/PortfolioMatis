@@ -29,18 +29,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
     </script>
-    
-    <script> 
-        var map = L.map('map').setView([51.21560, 4.43124], 12.);
-    
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    
-        L.marker([51.21560, 4.43214]).addTo(map)
-            .bindPopup('Base of Operations')
-            .openPopup();
-    </script>
 </head>
 <body>
 
@@ -80,6 +68,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div id="map" class="border rounded" style="width: 300px; height: 400px;"></div>
                 </aside>
 
+    <script> 
+        var map = L.map('map').setView([51.21560, 4.43124], 12.);
+    
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        L.marker([51.21560, 4.43214]).addTo(map)
+            .bindPopup('Base of Operations')
+            .openPopup();
+    </script>
             </div>
         </section>
 
