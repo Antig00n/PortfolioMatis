@@ -29,6 +29,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
     </script>
+    
+    <script> 
+        var map = L.map('map').setView([51.21560, 4.43124], 12.);
+    
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        L.marker([51.21560, 4.43214]).addTo(map)
+            .bindPopup('Base of Operations')
+            .openPopup();
+    </script>
 </head>
 <body>
 
@@ -74,17 +86,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     </main>
 
 
-    <script> 
-        var map = L.map('map').setView([51.21560, 4.43124], 12.);
-    
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    
-        L.marker([51.21560, 4.43214]).addTo(map)
-            .bindPopup('Base of Operations')
-            .openPopup();
-    </script>
 <footer class="footer bg-white text-center w-100 fixed-bottom" style="opacity: 0.5; color: #093445 ;">
     <div class="container-fluid">
         <p class="mb-0">&copy; 2025 Matis Ramos</p>
