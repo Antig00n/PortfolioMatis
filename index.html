@@ -16,24 +16,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
 
-    <script>
-document.addEventListener("DOMContentLoaded", async () => {
-    try {
-        const response = await fetch("https://meowfacts.herokuapp.com/");
-        const data = await response.json();
-        const fact = data.data[0];
-
-
-        if (fact.length <= 150) {
-            document.getElementById("catFact").innerText = fact;
-        } 
-    } catch (error) {
-        console.error("Error fetching cat fact:", error);
-        document.getElementById("catFact").innerText = "Failed to load cat fact.";
-    }
-});
-
-    </script>
+    
 </head>
 <body>
 
@@ -92,10 +75,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 <footer class="footer bg-white text-center w-100 fixed-bottom" style="opacity: 0.5; color: #093445 ;">
     <div class="container-fluid">
-        <p class="mb-0">&copy; 2025 Matis Ramos -  <p style="font-size: 0,5rem;" id="catFact">Loading...</p></p>
+        <p class="mb-0">&copy; 2025 Matis Ramos</p>
     </div>
-    <div>
-</div>
+ 
 </footer>
 
 </footer>
